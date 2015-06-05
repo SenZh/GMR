@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>GMR</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>src/image/ico.ico</name>
+			<type>1</type>
+			<location>D:/快盘/Java project/GMR/src/ico.ico</location>
+		</link>
+		<link>
+			<name>src/image/ico.png</name>
+			<type>1</type>
+			<location>D:/快盘/Java project/GMR/src/ico.png</location>
+		</link>
+	</linkedResources>
+</projectDescription>
