@@ -6,11 +6,6 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import javax.swing.JFileChooser;
-import javax.swing.filechooser.FileNameExtensionFilter;
-
-import com.sun.corba.se.impl.ior.WireObjectKeyTemplate;
-
 import jxl.Workbook;
 import jxl.read.biff.BiffException;
 import jxl.write.Label;
@@ -46,9 +41,9 @@ public class DataRecord {
 	{
 	
 		try {
-			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");//ÉèÖÃÈÕÆÚ¸ñÊ½
-			Xls filter=new Xls(".xls");                                                                                               //awtÑ¡Ôñ¿ò
-			 FileDialog fdDialog=new FileDialog(window.getFrame(), "±£´æÎª", FileDialog.SAVE);
+			SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd HH-mm-ss");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¸ï¿½Ê½
+			Xls filter=new Xls(".xls");                                                                                               //awtÑ¡ï¿½ï¿½ï¿½
+			 FileDialog fdDialog=new FileDialog(window.getFrame(), "ï¿½ï¿½ï¿½ï¿½Îª", FileDialog.SAVE);
 			 fdDialog.setFilenameFilter(filter);
 			 fdDialog.setFile(df.format(new Date())+".xls");
 			 fdDialog.setVisible(true);
@@ -60,7 +55,7 @@ public class DataRecord {
 			}
 			file=new File(fdDialog.getDirectory()+fdDialog.getFile());
 			fdDialog.dispose();			  
-			/*                                                      SWING  Ñ¡Ôñ¿ò	
+			/*                                                      SWING  Ñ¡ï¿½ï¿½ï¿½	
 			 FileNameExtensionFilter filter = new FileNameExtensionFilter( ".xls", "xls");         
 			 JFileChooser chooser=new JFileChooser();
 			 chooser.addChoosableFileFilter(filter);
@@ -156,7 +151,7 @@ public class DataRecord {
 	}
 
 	
-	/*½áÊøÊý¾Ý¼ÇÂ¼
+	/*ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¼ï¿½Â¼
 	 * */
 	public void close()
 	{
@@ -176,7 +171,7 @@ public class DataRecord {
 			
 		
 	}
-	/*  ³õÊ¼»¯²ÎÊý£¬´´½¨Êý¾ÝÎÄ¼þ£¬¿ªÊ¼¼ÇÂ¼Êý¾Ý
+	/*  ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
 	 * */
 	public void start()
 	{
@@ -198,9 +193,9 @@ class Xls implements FilenameFilter
 	}
 
 }
-/* @DataNode,¼ÇÂ¼½ÚµãÊý¾ÝµÄÊý¾Ý¼¯ºÏ
- * @para row,Êý¾Ý½ÚµãËùÔÚexcel±í¸ñÖÐµÄÐÐºÅ
- * @para col,Êý¾Ý½ÚµãËùÔÚexcel±í¸ñÖÐµÄÁÐºÅ
+/* @DataNode,ï¿½ï¿½Â¼ï¿½Úµï¿½ï¿½ï¿½ï¿½Ýµï¿½ï¿½ï¿½ï¿½Ý¼ï¿½ï¿½ï¿½
+ * @para row,ï¿½ï¿½ï¿½Ý½Úµï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ðºï¿½
+ * @para col,ï¿½ï¿½ï¿½Ý½Úµï¿½ï¿½ï¿½ï¿½ï¿½excelï¿½ï¿½ï¿½ï¿½Ðµï¿½ï¿½Ðºï¿½
  * 
   */
 
@@ -208,13 +203,13 @@ class DataNode
 {
 	private int row=0;
 	private int col=0;
-	//¹¹Ôìº¯Êý
+	//ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½
 	public DataNode(int column,int row)
 	{
 		col=column;
 		this.row=row;
 	}
-	//Êý¾Ý½ÚµãÔö¼Ó±êÇ©Êý¾Ý
+	//ï¿½ï¿½ï¿½Ý½Úµï¿½ï¿½ï¿½ï¿½Ó±ï¿½Ç©ï¿½ï¿½ï¿½ï¿½
 	public void addLabel(WritableSheet wsheet,String str) 
 	{
 		try {
@@ -226,7 +221,7 @@ class DataNode
 		}
 		row++;
 	}
-	//Êý¾Ý½ÚµãÔö¼ÓÊý×ÖÊý¾Ý
+	//ï¿½ï¿½ï¿½Ý½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void addNumber(WritableSheet wsheet,float data)
 	{
 		try {
